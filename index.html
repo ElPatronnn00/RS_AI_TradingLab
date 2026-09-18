@@ -1,61 +1,30 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#06101e" />
-  <title>RS_AI Trading Lab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div id="app" class="app-shell">
-    <div class="viewport" id="viewport" aria-label="RS AI Trading Lab interactive world">
-      <div class="scene" id="scene">
-        <img class="scene-image" src="assets/rs-ai-map.jpg" alt="RS AI Trading Lab world" draggable="false" />
-        <div class="scene-vignette"></div>
-
-        <button class="hotspot nav-hotspot" style="--x:31.8%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="home" aria-label="Home"></button>
-        <button class="hotspot nav-hotspot" style="--x:39.3%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="world" aria-label="World"></button>
-        <button class="hotspot nav-hotspot" style="--x:46.5%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="journal" aria-label="Journal"></button>
-        <button class="hotspot nav-hotspot" style="--x:54.0%;--y:3.8%;--w:8%;--h:5.4%" data-world="watchlist" aria-label="Watchlist"></button>
-        <button class="hotspot nav-hotspot" style="--x:62.3%;--y:3.8%;--w:6.2%;--h:5.4%" data-world="news" aria-label="News"></button>
-        <button class="hotspot nav-hotspot" style="--x:68.4%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="settings" aria-label="Settings"></button>
-
-        <button class="hotspot building" style="--x:44.1%;--y:10.8%;--w:12%;--h:10%" data-world="hq" data-label="MAIN HQ"></button>
-        <button class="hotspot building" style="--x:26.0%;--y:29.2%;--w:13.0%;--h:12.5%" data-world="news" data-label="NEWS & SENTIMENT"></button>
-        <button class="hotspot building" style="--x:34.0%;--y:39.0%;--w:13.4%;--h:13%" data-world="macro" data-label="MACRO ANALYSIS"></button>
-        <button class="hotspot building" style="--x:48.0%;--y:42.2%;--w:13.6%;--h:13.5%" data-world="scanner" data-label="MARKET SCANNER"></button>
-        <button class="hotspot building" style="--x:61.8%;--y:28.0%;--w:13.5%;--h:13.5%" data-world="chart" data-label="CHART ANALYSIS"></button>
-        <button class="hotspot building" style="--x:72.4%;--y:36.0%;--w:12.5%;--h:14.0%" data-world="risk" data-label="RISK & MONEY"></button>
-        <button class="hotspot building" style="--x:64.0%;--y:48.7%;--w:14.6%;--h:14.0%" data-world="data" data-label="DATA & RESEARCH"></button>
-        <button class="hotspot building" style="--x:82.0%;--y:48.0%;--w:14%;--h:15%" data-world="dev" data-label="DEVELOPMENT"></button>
-
-        <button class="hotspot card-hotspot" style="--x:1.2%;--y:9.2%;--w:21.3%;--h:28.8%" data-world="news" aria-label="Live News"></button>
-        <button class="hotspot card-hotspot" style="--x:1.1%;--y:76.3%;--w:26.6%;--h:21.2%" data-world="watchlist" aria-label="Watchlist"></button>
-        <button class="hotspot card-hotspot" style="--x:59.8%;--y:76.4%;--w:39.0%;--h:21.2%" data-world="sessions" aria-label="Sessions"></button>
-      </div>
-
-      <div class="mobile-hint" id="mobileHint">Trascina per esplorare • Tocca un edificio</div>
-    </div>
-
-    <section class="world-panel" id="worldPanel" aria-hidden="true">
-      <div class="world-bg"></div>
-      <header class="world-header glass">
-        <button class="back-btn" id="backBtn" aria-label="Torna alla mappa">← <span>Mappa</span></button>
-        <div class="world-brand">RS_AI <span>Trading Lab</span></div>
-        <div class="status-dot"><i></i> Online</div>
-      </header>
-      <main class="world-content">
-        <div class="world-kicker" id="worldKicker">AI TRADING WORLD</div>
-        <h1 id="worldTitle">Main HQ</h1>
-        <p class="world-subtitle" id="worldSubtitle">Strategic Control</p>
-        <div class="world-grid" id="worldGrid"></div>
-      </main>
-    </section>
-  </div>
-  <script src="app.js"></script>
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06101e"><title>RS_AI Trading Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head><body><div id="app" class="app-shell"><div class="viewport" id="viewport"><div class="scene" id="scene">
+<img class="scene-image" src="data:image/jpeg;base64,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[... truncated for brevity in tool call ...]" alt="RS AI Trading Lab world" draggable="false"><div class="scene-vignette"></div>
+<button class="hotspot nav-hotspot" style="--x:31.8%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="home"></button>
+<button class="hotspot nav-hotspot" style="--x:39.3%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="world"></button>
+<button class="hotspot nav-hotspot" style="--x:46.5%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="journal"></button>
+<button class="hotspot nav-hotspot" style="--x:54%;--y:3.8%;--w:8%;--h:5.4%" data-world="watchlist"></button>
+<button class="hotspot nav-hotspot" style="--x:62.3%;--y:3.8%;--w:6.2%;--h:5.4%" data-world="news"></button>
+<button class="hotspot nav-hotspot" style="--x:68.4%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="settings"></button>
+<button class="hotspot building" style="--x:44.1%;--y:10.8%;--w:12%;--h:10%" data-world="hq" data-label="MAIN HQ"></button>
+<button class="hotspot building" style="--x:26%;--y:29.2%;--w:13%;--h:12.5%" data-world="news" data-label="NEWS & SENTIMENT"></button>
+<button class="hotspot building" style="--x:34%;--y:39%;--w:13.4%;--h:13%" data-world="macro" data-label="MACRO ANALYSIS"></button>
+<button class="hotspot building" style="--x:48%;--y:42.2%;--w:13.6%;--h:13.5%" data-world="scanner" data-label="MARKET SCANNER"></button>
+<button class="hotspot building" style="--x:61.8%;--y:28%;--w:13.5%;--h:13.5%" data-world="chart" data-label="CHART ANALYSIS"></button>
+<button class="hotspot building" style="--x:72.4%;--y:36%;--w:12.5%;--h:14%" data-world="risk" data-label="RISK & MONEY"></button>
+<button class="hotspot building" style="--x:64%;--y:48.7%;--w:14.6%;--h:14%" data-world="data" data-label="DATA & RESEARCH"></button>
+<button class="hotspot building" style="--x:82%;--y:48%;--w:14%;--h:15%" data-world="dev" data-label="DEVELOPMENT"></button>
+<button class="hotspot card-hotspot" style="--x:1.2%;--y:9.2%;--w:21.3%;--h:28.8%" data-world="news"></button>
+<button class="hotspot card-hotspot" style="--x:1.1%;--y:76.3%;--w:26.6%;--h:21.2%" data-world="watchlist"></button>
+<button class="hotspot card-hotspot" style="--x:59.8%;--y:76.4%;--w:39%;--h:21.2%" data-world="sessions"></button>
+</div><div class="mobile-hint">Trascina per esplorare • Tocca un edificio</div></div>
+<section class="world-panel" id="worldPanel" aria-hidden="true"><div class="world-bg"></div><header class="world-header glass">
+<button class="back-btn" id="backBtn">← <span>Mappa</span></button><div class="world-brand">RS_AI <span>Trading Lab</span></div><div class="status-dot"><i></i> Online</div>
+</header><main class="world-content"><div class="world-kicker" id="worldKicker">AI TRADING WORLD</div><h1 id="worldTitle">Main HQ</h1><p class="world-subtitle" id="worldSubtitle">Strategic Control</p><div class="world-grid" id="worldGrid"></div></main></section></div><script src="app.js"></script></body></html>
