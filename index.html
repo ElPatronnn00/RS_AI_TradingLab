@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#06101e" />
+  <title>RS_AI Trading Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <div class="viewport" id="viewport" aria-label="RS AI Trading Lab interactive world">
+      <div class="scene" id="scene">
+        <img class="scene-image" src="assets/rs-ai-map.jpg" alt="RS AI Trading Lab world" draggable="false" />
+        <div class="scene-vignette"></div>
+
+        <button class="hotspot nav-hotspot" style="--x:31.8%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="home" aria-label="Home"></button>
+        <button class="hotspot nav-hotspot" style="--x:39.3%;--y:3.8%;--w:7.2%;--h:5.4%" data-action="world" aria-label="World"></button>
+        <button class="hotspot nav-hotspot" style="--x:46.5%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="journal" aria-label="Journal"></button>
+        <button class="hotspot nav-hotspot" style="--x:54.0%;--y:3.8%;--w:8%;--h:5.4%" data-world="watchlist" aria-label="Watchlist"></button>
+        <button class="hotspot nav-hotspot" style="--x:62.3%;--y:3.8%;--w:6.2%;--h:5.4%" data-world="news" aria-label="News"></button>
+        <button class="hotspot nav-hotspot" style="--x:68.4%;--y:3.8%;--w:7.2%;--h:5.4%" data-world="settings" aria-label="Settings"></button>
+
+        <button class="hotspot building" style="--x:44.1%;--y:10.8%;--w:12%;--h:10%" data-world="hq" data-label="MAIN HQ"></button>
+        <button class="hotspot building" style="--x:26.0%;--y:29.2%;--w:13.0%;--h:12.5%" data-world="news" data-label="NEWS & SENTIMENT"></button>
+        <button class="hotspot building" style="--x:34.0%;--y:39.0%;--w:13.4%;--h:13%" data-world="macro" data-label="MACRO ANALYSIS"></button>
+        <button class="hotspot building" style="--x:48.0%;--y:42.2%;--w:13.6%;--h:13.5%" data-world="scanner" data-label="MARKET SCANNER"></button>
+        <button class="hotspot building" style="--x:61.8%;--y:28.0%;--w:13.5%;--h:13.5%" data-world="chart" data-label="CHART ANALYSIS"></button>
+        <button class="hotspot building" style="--x:72.4%;--y:36.0%;--w:12.5%;--h:14.0%" data-world="risk" data-label="RISK & MONEY"></button>
+        <button class="hotspot building" style="--x:64.0%;--y:48.7%;--w:14.6%;--h:14.0%" data-world="data" data-label="DATA & RESEARCH"></button>
+        <button class="hotspot building" style="--x:82.0%;--y:48.0%;--w:14%;--h:15%" data-world="dev" data-label="DEVELOPMENT"></button>
+
+        <button class="hotspot card-hotspot" style="--x:1.2%;--y:9.2%;--w:21.3%;--h:28.8%" data-world="news" aria-label="Live News"></button>
+        <button class="hotspot card-hotspot" style="--x:1.1%;--y:76.3%;--w:26.6%;--h:21.2%" data-world="watchlist" aria-label="Watchlist"></button>
+        <button class="hotspot card-hotspot" style="--x:59.8%;--y:76.4%;--w:39.0%;--h:21.2%" data-world="sessions" aria-label="Sessions"></button>
+      </div>
+
+      <div class="mobile-hint" id="mobileHint">Trascina per esplorare • Tocca un edificio</div>
+    </div>
+
+    <section class="world-panel" id="worldPanel" aria-hidden="true">
+      <div class="world-bg"></div>
+      <header class="world-header glass">
+        <button class="back-btn" id="backBtn" aria-label="Torna alla mappa">← <span>Mappa</span></button>
+        <div class="world-brand">RS_AI <span>Trading Lab</span></div>
+        <div class="status-dot"><i></i> Online</div>
+      </header>
+      <main class="world-content">
+        <div class="world-kicker" id="worldKicker">AI TRADING WORLD</div>
+        <h1 id="worldTitle">Main HQ</h1>
+        <p class="world-subtitle" id="worldSubtitle">Strategic Control</p>
+        <div class="world-grid" id="worldGrid"></div>
+      </main>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
